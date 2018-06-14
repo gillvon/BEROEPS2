@@ -1,0 +1,57 @@
+.project-detail
+    background: red
+    height: 500px
+    width: 100%
+    position: relative
+
+    nav
+        position: absolute
+        right: 0
+        bottom: 100%
+
+        ul
+            display: flex
+            justify-content: center
+            align-items: flex-end
+            position: relative
+            right: 30px
+
+            li
+                transform: skew(-45deg)
+                background: rgba(0, 0, 0, .4)
+
+                span
+                    transform: skew(45deg)
+                    display: block
+                    padding: 15px 25px
+                    font-family: DoctorGlitch
+                    color: white
+                &:last-child
+                    transform: skew(-45deg)
+                    background: black
+                    position: relative
+                    padding: 4px
+
+                    span
+                        position: relative
+                        left: 15px
+                        z-index: 99
+                    
+
+                    &:after
+                        content: ''
+                        position: absolute
+                        right: -30px
+                        top: 0
+                        transform: skew(45deg)
+                        display: block
+                        background: black
+                        width: 60px
+                        height: 57px
+
+    .project-detail-show
+        position: relative
+        z-index: 199
+        width: 100%
+        height: 100%
+        background: blue

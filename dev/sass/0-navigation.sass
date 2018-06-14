@@ -1,0 +1,34 @@
+nav.navigation
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+
+    ul
+        display: flex
+        align-items: align-items
+
+        li
+            padding: 25px
+            font:
+                family: DoctorGlitch
+                style: italic
+                size: 18px
+            color: white
+            
+            // &:first-child
+            //     padding-left: 0
+            
+        
+        .active
+            position: relative
+            &:after
+                content: ''
+                position: absolute
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+                border: 10px solid transparent
+                border-left: 7px solid transparent
+                border-right: 7px solid transparent
+                border-top-color: white
