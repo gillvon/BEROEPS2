@@ -51,7 +51,7 @@ gulp.task('watch', function(){
 	livereload.listen();
 
 	gulp.watch(['dev/*.php', 'dev/*.html'], ['content']);
-	gulp.watch('dev/css/*.sass', ['style']);
+	gulp.watch('dev/sass/*.sass', ['style']);
 	gulp.watch('dev/js/dev/*.js', ['script']);
 
 });
