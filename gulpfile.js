@@ -52,7 +52,7 @@ gulp.task('watch', function(){
 
 	gulp.watch(['dev/*.php', 'dev/*.html'], ['content']);
 	gulp.watch('dev/sass/*.sass', ['style']);
-	gulp.watch('dev/js/dev/*.js', ['script']);
+	gulp.watch('dev/js/*.js', ['script']);
 
 });
 
