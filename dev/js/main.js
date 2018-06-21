@@ -81,7 +81,9 @@ $(document).ready(function() {
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
 
-    initCanvas();
+    setTimeout(function(){
+        initCanvas();
+    }, 100);
 
 
     function fitTextOnCanvas(text, fontface) {
@@ -104,12 +106,12 @@ $(document).ready(function() {
         context.rotate(90 * Math.PI / 180);
         
         var text = $('.page-title').text();
-        fitTextOnCanvas(text, "Doctor Glitch");
+        fitTextOnCanvas(text, "DoctorGlitch");
         
         // draw the text
         var xPos = (text.length > 12) ? -text.length : -text.length - 10;
-        // context.fillStyle = 'rgb(45, 45, 45)';
-        context.fillStyle = 'white';
+        context.fillStyle = 'rgb(45, 45, 45)';
+        // context.fillStyle = 'white';
         
         context.fillText(text, 10, -20);
         
