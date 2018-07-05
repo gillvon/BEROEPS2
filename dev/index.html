@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
+
+
     <title>Portfolio</title>
 </head>
 <body>
@@ -27,11 +29,7 @@
                 <li>Maze Game</li>
                 <li>BBQ VR Game</li>
             </ul>
-        </nav>
-    
-        
-    
-            
+        </nav> 
         
         <main class="container">
             <div class="project-detail container">
@@ -45,20 +43,55 @@
                     </ul>
                 </nav>
                 <div class="project-detail-show">
-    
+                    <div id="project-downloads">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aliquid rerum voluptatum possimus eius maxime fugit adipisci minus non, est, doloremque tenetur quibusdam, suscipit ullam aperiam? Debitis id obcaecati repellat!
+                    </div>
+                    <div id="project-updates">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aliquid rerum voluptatum possimus eius maxime fugit adipisci minus non, est, doloremque tenetur quibusdam, suscipit ullam aperiam? Debitis id obcaecati repellat!
+                    </div>
+                    <div id="project-development">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aliquid rerum voluptatum possimus eius maxime fugit adipisci minus non, est, doloremque tenetur quibusdam, suscipit ullam aperiam? Debitis id obcaecati repellat!
+                    </div>
+                    <div id="project-summary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aliquid rerum voluptatum possimus eius maxime fugit adipisci minus non, est, doloremque tenetur quibusdam, suscipit ullam aperiam? Debitis id obcaecati repellat!
+                    </div>
+                                    
+                    <div id="project-game" class="webgl-content active" style="position:relative; height: 100%;">
+                        <div id="gameContainer" style="margin: auto 0; height: 100%"></div>
+
+                        <footer class="game-footer">
+                            <div class="game-title">Space Shooter</div>
+                            <div class="game-fullscreen" onclick="gameInstance.SetFullscreen(1)">
+                                <i class="fas fa-arrows-alt-v"></i>
+                            </div>
+                        </footer>
+                    </div>
+                    
+                    
+                    
                 </div>
             </div>
         </main>
 
         <!-- <div class="page-title" id="page-title">Homepage</div> -->
         <!-- <span style="font-family: 'Lobster', cursive;">&nbsp;</span> -->
-        <canvas id="canvas">
+        <canvas id="page-title">
             <span class="page-title">Ball Game</span>
         </canvas>
 
     <script src="js/lib/jquery.js"></script>
-    <script src="js/lib/FitText.js"></script>
     <script src="js/main.js"></script>
+
+    
+    <!-- UNITY LINKS -->
+    <link rel="shortcut icon" href="unity/css/favicon.ico">
+    <link rel="stylesheet" href="unity/css/style.css">
+    <script src="unity/css/UnityProgress.js"></script>  
+    <script src="unity/loader/a.js"></script>
+    <script type="text/javascript">
+        var gameInstance = window.UnityLoader.instantiate("gameContainer", "unity/loader/WEBGLBuild.json", {onProgress: UnityProgress});
+    </script>
+<!--=============-->
 
 </body>
 </html>

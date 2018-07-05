@@ -7,11 +7,13 @@ body { background-color: #242424; margin: 0; padding: 0; font-size: 16px; }
 
 .container-fluid { max-width: 88vw; margin: 0 auto; }
 
-.title, .page-title h1 { font-family: DoctorGlitch; color: white; }
+.title, .page-title h1, .project-detail .project-detail-show #project-game .game-footer .game-title { font-family: DoctorGlitch; color: white; }
 
-header.title { margin: 50px 0; }
-header.title h1 { margin: 0; font-size: 2.5em; }
-header.title small { font-size: 1.5em; font-style: italic; opacity: 0.4; }
+header.title, .project-detail .project-detail-show #project-game .game-footer header.game-title { margin: 50px 0; }
+header.title h1, .project-detail .project-detail-show #project-game .game-footer header.game-title h1 { margin: 0; font-size: 2.5em; }
+header.title small, .project-detail .project-detail-show #project-game .game-footer header.game-title small { font-size: 1.5em; font-style: italic; opacity: 0.4; }
+
+#page-title { position: fixed; top: 0; left: 0; margin: 0; padding: 0; z-index: -10; }
 
 .page-title { height: 100vh; position: relative; }
 .page-title h1 { background: orange; margin: 0; position: absolute; width: calc(100vh - 50px); top: 50%; left: 0%; -webkit-transform-origin: left top; transform-origin: left top; -webkit-transform: rotate(90deg) translate(-50%, -100%); transform: rotate(90deg) translate(-50%, -100%); white-space: nowrap; }
@@ -24,18 +26,25 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 nav.navigation { position: fixed; bottom: 0; left: 0; width: 100%; }
 nav.navigation ul { display: flex; align-items: align-items; }
-nav.navigation ul li { padding: 25px; font-family: DoctorGlitch; font-style: italic; font-size: 18px; color: white; }
+nav.navigation ul li { padding: 25px; font-family: Roboto; font-style: italic; font-weight: bold; font-size: 18px; text-transform: uppercase; color: white; }
 nav.navigation ul .active { position: relative; }
 nav.navigation ul .active:after { content: ""; position: absolute; top: 0; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); border: 10px solid transparent; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top-color: white; }
 
 .project-detail { height: 500px; width: 100%; position: fixed; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin-top: 48px; }
 .project-detail nav { position: absolute; right: 0; bottom: 100%; }
 .project-detail nav ul { display: flex; justify-content: center; align-items: flex-end; position: relative; right: 30px; }
-.project-detail nav ul li { -webkit-transform: skew(-45deg); transform: skew(-45deg); background: rgba(0, 0, 0, 0.4); }
+.project-detail nav ul li { -webkit-transform: skew(-45deg); transform: skew(-45deg); background: rgba(0, 0, 0, 0.4); transition: all 0.4s; cursor: pointer; }
 .project-detail nav ul li span { -webkit-transform: skew(45deg); transform: skew(45deg); display: block; padding: 15px 25px; font-family: DoctorGlitch; color: white; }
+.project-detail nav ul li:hover { background: rgba(35, 35, 35, 0.4); }
 .project-detail nav ul li:last-child { -webkit-transform: skew(-45deg); transform: skew(-45deg); background: black; position: relative; padding: 4px; }
 .project-detail nav ul li:last-child span { position: relative; left: 15px; z-index: 99; }
 .project-detail nav ul li:last-child:after { content: ""; position: absolute; right: -30px; top: 0; -webkit-transform: skew(45deg); transform: skew(45deg); display: block; background: black; width: 60px; height: 57px; }
-.project-detail .project-detail-show { position: relative; z-index: 199; width: 100%; height: 100%; background: #646464; }
-
-canvas { position: fixed; top: 0; left: 0; margin: 0; padding: 0; z-index: -10; }
+.project-detail .project-detail-show { position: relative; z-index: 199; width: 100%; height: 100%; }
+.project-detail .project-detail-show > div { position: absolute; opacity: 0; transition: opacity 0.6s; z-index: 0; height: 100%; }
+.project-detail .project-detail-show .active { opacity: 1; z-index: 10; }
+.project-detail .project-detail-show #project-game .game-footer { position: absolute; width: 100%; bottom: -1px; display: flex; justify-content: space-between; align-items: center; opacity: 0.1; transition: all 0.6s; }
+.project-detail .project-detail-show #project-game .game-footer:hover { opacity: 1; }
+.project-detail .project-detail-show #project-game .game-footer .game-title { padding: 15px; padding-right: 50px; background: black; -webkit-clip-path: polygon(0 0, 85% 0%, 100% 100%, 0% 100%); clip-path: polygon(0 0, 85% 0%, 100% 100%, 0% 100%); font-size: 1.5em; }
+.project-detail .project-detail-show #project-game .game-footer .game-fullscreen { background: black; width: 57.2px; height: 57.2px; display: flex; justify-content: center; align-items: center; cursor: pointer; }
+.project-detail .project-detail-show #project-game .game-footer .game-fullscreen i { color: white; -webkit-transform: rotate(45deg); transform: rotate(45deg); font-size: 2em; }
+.project-detail .project-detail-show #project-summary { background: red; }
